@@ -1,0 +1,295 @@
+:root { --text-color: #1a1c20;
+    --link-color: #4a76ee;
+    --background-color: #eeeff1;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+font-family: 'poppins', sans-serif;
+background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+nav {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    height: 80px;
+    align-items: center;
+}
+
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+nav .right a:last-child {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    
+}
+
+nav .right a span {
+  margin-left: 5px;
+}
+/** MEDIA **/
+@media (max-width: 600px) {
+    /* NAVBAR */
+    nav {
+        margin: 0 20px;
+    }
+    nav .right a {
+        font-size: 22px;
+    }
+    nav .right a:last-child {
+        background-color: transparent;
+        color: var(--text-color);
+        padding: 0;
+    }
+    nav .right a span {
+        display: none;
+    }
+    .hero {
+        padding: 0 20px;
+    }
+    .hero .text h2 {
+        font-size: 30px;
+    }
+    .skills {
+        padding: 0 20px;
+    }
+    
+    /*WORK*/
+    .work {
+    padding: 0 20px;
+    }
+    /*CONTACT*/
+    .contact {
+    padding: 0 20px;
+    }
+}
+@media (max-width: 850px) {
+    /* HERO */
+.hero .text h2 {
+font-size: 35px;
+}
+}
+@media (max-width: 740px) {
+
+    /* HERO */
+.hero {
+flex-direction: column-reverse;}
+    
+.hero .headshot img {
+width: 300px;
+}
+    /*WORK*/
+    .work h3 {
+        text-align: center;
+    }
+    .work .group {
+        flex-direction: column;
+    }
+    /*CONTACT*/
+    .contact {
+        flex-direction: column;
+    }
+}
+
+/* HERO */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin: 50px 0;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.hero .text {
+flex: 5;
+}
+
+.hero .text h2 {
+    font-size: 45px;
+    padding-bottom: 5px;
+}
+
+.hero .text .links {
+ margin-top: 25px;   
+}
+
+.hero .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: solid 2px pink;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hero .headshot {
+flex: 2;
+display: flex;
+justify-content: right;
+}
+
+.hero .headshot img {
+    border-radius: 50%;
+    width: 340px;
+}
+
+/** SKILLS **/
+/**I NEED A LINE DIVIDER OR FULL TRANSITION**/
+.skills {
+    display: flex;
+    padding: 0 50px;
+    margin-bottom: 100px;
+    margin-left: 50px; /*was 5px*/
+}
+
+.skill-items {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+.skill-item {
+  /**just in case**/  
+}
+.skills h2 {
+    text-align: center;
+    font-size: 35px;
+    padding-right: 50px;
+}
+.skills .text {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.skills p {
+padding: 20px 20px;
+font-size: smaller;
+color: #383b4a;
+}
+
+/** WORK **/
+.work {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.work h3 {
+    font-size: 35px; /*questionable*/
+    margin-bottom: 30px;
+}
+
+.work .group {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.work .group .person-details {
+    text-align: center;
+    flex: 2;
+}
+
+.work .group .person-details p {
+    font-weight: 600;
+}
+
+.work .group .person-details p:last-child {
+    font-weight: normal;
+}
+
+.work .group .person-details img {
+width: 200px;
+aspect-ratio: 1/1;
+object-fit: cover;
+border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.work .group .text {
+    flex: 8;
+}
+
+
+/**CONTACT**/
+
+.contact {
+padding: 0 50px;
+margin-bottom: 100px;
+    /**margin left and right not right**/
+}
+
+.contact h2 {
+font-size: 35px;
+}
+.contact .group {
+display: flex;
+gap: 50px;
+
+}
+
+.contact .group .text {
+flex: 3;
+margin-top: 20px;
+
+}
+
+.contact .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .group form input,
+.contact .group form textarea {
+font-family: 'Poppins', sans serif;
+border: 2px solid pink;
+background-color: transparent;
+padding: 10px;
+margin-bottom: 15px;
+outline: none;
+resize: none;
+}
+
+.contact .group form button {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: var(--link-color);
+    border: none;
+    height: 50px;
+    cursor: pointer;
+}
+
+.contact .group form button:hover {
+    filter: brightness(.9);
+}
